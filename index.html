@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>FF PANEL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">FF <span>PANEL</span></div>
+    <div class="status">● ONLINE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="small">GAMING UTILITY</p>
+      <h1>FF PANEL</h1>
+      <p>TRAIN • IMPROVE • DOMINATE</p>
+    </section>
+
+    <section class="panel">
+      <h2>🎯 AIM TRAINER</h2>
+      <p>Practice your aiming accuracy.</p>
+      <button onclick="startTrainer()">START TRAINING</button>
+      <div id="arena">
+        <div id="target" onclick="hitTarget()"></div>
+        <p id="score">SCORE: 0</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>👁 ESP SIMULATOR</h2>
+      <span class="tag">DEMO ONLY</span>
+      <p>Experimental target visualization.</p>
+      <div id="map">
+        <span class="dot d1"></span>
+        <span class="dot d2"></span>
+        <span class="dot d3"></span>
+        <span class="player">YOU</span>
+      </div>
+      <button onclick="toggleDemo()">TOGGLE DEMO</button>
+      <p id="demoStatus">SIMULATOR: OFF</p>
+    </section>
+
+    <section class="panel">
+      <h2>⚙ SENSITIVITY</h2>
+      <div class="setting">
+        <label>General <span id="v1">90</span></label>
+        <input type="range" min="0" max="200" value="90"
+          oninput="v1.textContent=this.value">
+      </div>
+      <div class="setting">
+        <label>Red Dot <span id="v2">85</span></label>
+        <input type="range" min="0" max="200" value="85"
+          oninput="v2.textContent=this.value">
+      </div>
+      <div class="setting">
+        <label>2X Scope <span id="v3">80</span></label>
+        <input type="range" min="0" max="200" value="80"
+          oninput="v3.textContent=this.value">
+      </div>
+      <div class="setting">
+        <label>4X Scope <span id="v4">75</span></label>
+        <input type="range" min="0" max="200" value="75"
+          oninput="v4.textContent=this.value">
+      </div>
+    </section>
+  </main>
+
+  <footer>FF PANEL • STANDALONE TRAINING UTILITY</footer>
+  <script src="app.js"></script>
+</body>
+</html>
